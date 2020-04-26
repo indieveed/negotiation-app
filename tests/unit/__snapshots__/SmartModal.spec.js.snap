@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/tabs.vue renders the component 1`] = `
+<transition-stub name="modal" appear="true">
+  <div class="modal"><a href="#close" aria-label="Close" class="modal__overlay"></a>
+    <div class="modal__container"><button href="#close" aria-label="Close" class="btn modal__close"></button>
+      <div class="modal__header"></div>
+      <div tabindex="0" class="modal__body"></div>
+      <!---->
+    </div>
+  </div>
+</transition-stub>
+`;

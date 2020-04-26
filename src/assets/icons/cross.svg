@@ -1,0 +1,13 @@
+<svg viewBox="0 0 5 5" width="5" height="5" fill="#fff" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="
+        M0,0 v1 h1 v-1z
+        m1,1 v1 h1 v-1z
+        m1,1 v1 h1 v-1z
+        m1,1 v1 h1 v-1z
+        m1,1 v1 h1 v-1z
+        M0,5 v-1 h1 v1z
+        m1,-1 v-1 h1 v1z
+        m2,-2 v-1 h1 v1z
+        m1,-1 v-1 h1 v1z
+    " fill="#fff"/>
+</svg>

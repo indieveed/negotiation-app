@@ -8,18 +8,23 @@
           />
         </template>
     </Tabs>
+    <Modal v-if="showModal" @close="showModal=false">
+      <slot name="header">Success!</slot>
+    </Modal>
   </div>
 </template>
 
 <script>
 import Tabs from "@/components/ui/tabs"
 import EnterSum from '@/components/smart/enter-sum'
+import Modal from '@/components/smart/modal'
 
 export default {
   name: 'Home',
   components: {
     Tabs,
     EnterSum,
+    Modal
   },
   data() {
     return {
@@ -33,7 +38,14 @@ export default {
         labelText: 'How much would you like to earn?',
         id: 'employee',
         active: false
-      }]
+      }],
+      showModal: false
+    }
+  },
+  methods: {
+    sendSum(item) {
+      console.log({item});
+      this.showModal = true
     }
   }
 }

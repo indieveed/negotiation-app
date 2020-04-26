@@ -1,8 +1,9 @@
 <template>
-  <form class="enter-sum">
+  <form class="enter-sum" @submit.prevent="$emit('submit', value)">
     <UINumberInput
       :placeholder="80000"
       :label="label"
+      v-model="value"
     />
     <UIButton class="enter-sum__submit">submit</UIButton>
   </form>
@@ -20,6 +21,11 @@ export default {
     label: {
       type: String,
       default: 'Enter sum:'
+    }
+  },
+  data() {
+    return {
+      value: undefined
     }
   }
 }
