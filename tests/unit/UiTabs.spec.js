@@ -43,4 +43,15 @@ describe('ui/tabs.vue', () => {
       expect(panels.at(index).text()).toEqual(items[index].id.toString())
     }
   })
+  it('labels \' text is passed through props', () => {
+    const wrapper = shallowMount(UiTabs, {
+      propsData: {
+        items
+      }
+    })
+    const labels = wrapper.findAll('.tabs__label')
+    for (let index = 0; index < labels.length; index++) {
+      expect(labels.at(index).text()).toEqual(items[index].text)
+    }
+  })
 })
