@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/tabs.vue renders the component 1`] = `
+<div class="tabs">
+  <div role="tablist" class="tabs__header"><input id="tabs-1-0" name="tabs-1" type="radio" role="tab" class="tabs__input" value="tabs-1-0"> <label for="tabs-1-0" class="tabs__label">Employer</label><input id="tabs-1-1" name="tabs-1" type="radio" role="tab" class="tabs__input" value="tabs-1-1"> <label for="tabs-1-1" class="tabs__label">Employee</label></div>
+  <div class="tabs__body">
+    <div name="tabs-1" role="tabpanel" tabindex="0" aria-labelledby="tabs-1-0" class="tabs__panel is-current"></div>
+    <div name="tabs-1" role="tabpanel" tabindex="0" aria-labelledby="tabs-1-1" class="tabs__panel"></div>
+  </div>
+</div>
+`;

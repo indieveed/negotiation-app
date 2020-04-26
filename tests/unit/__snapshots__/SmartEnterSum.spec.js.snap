@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/tabs.vue renders the component 1`] = `
+<form class="enter-sum">
+  <uinumberinput-stub placeholder="80000" label="Enter sum:" required="true"></uinumberinput-stub>
+  <uibutton-stub class="enter-sum__submit">submit</uibutton-stub>
+</form>
+`;

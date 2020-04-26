@@ -13,6 +13,14 @@ const items = [{
 
 
 describe('ui/tabs.vue', () => {
+  it('renders the component', () => {
+    const wrapper = shallowMount(UiTabs, {
+      propsData: {
+        items
+      }
+    })
+    expect(wrapper.html()).toMatchSnapshot()
+  })
   it('renders the same amount of labels as tabs passed', () => {
     const wrapper = shallowMount(UiTabs, {
       propsData: {
