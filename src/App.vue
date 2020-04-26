@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <h1>Choose your destiny</h1>
     <router-view/>
   </div>
 </template>
 <style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
+#app {
+  font-family: 'Press Start 2P', monospace;
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   text-align center
-  color #2c3e50
   margin-top 60px
+}
 </style>
