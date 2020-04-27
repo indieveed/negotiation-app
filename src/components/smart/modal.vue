@@ -61,14 +61,29 @@ export default {
   align-items center
 
   &__container {
-    padding: 1.2rem;
+    padding: 1rem;
     width: 960px;
     max-width: 100%;
     position relative
     border 2px solid
     padding 1rem
-    min-height 50%
+    min-height 90%
     background-color $bg-color
+    font-size 1rem
+    display flex
+    flex-direction column
+  }
+
+  &__header {
+    font-size 1.5rem
+    margin-top 1em
+  }
+
+  &__body {
+    flex-grow 1
+    display flex
+    flex-direction column
+    justify-content center
   }
 
   &__close {

@@ -86,6 +86,7 @@ export default {
 
   &__header {
     display flex
+    flex-wrap wrap
   }
 
   &__label {

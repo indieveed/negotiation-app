@@ -11,8 +11,10 @@
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   text-align center
-  margin-top 60px
   padding-left 1rem
   padding-right 1rem
+  height 100%
+  display flex
+  flex-direction column
 }
 </style>

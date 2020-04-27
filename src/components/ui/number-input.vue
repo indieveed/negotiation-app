@@ -5,7 +5,7 @@
       :placeholder="placeholder"
       :value="value"
       :required="required"
-      @change="$emit('change', value)"
+      @input="$emit('input', +$event.target.value)"
       class="number-input__field"
       type="number"
     >
@@ -49,6 +49,8 @@ export default {
     transition .1s ease
     border 2px solid transparent
     margin-left 0.5em
+    max-width 60vw
+    margin-bottom 1em
 
     &:focus {
       outline 0
