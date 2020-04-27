@@ -4,6 +4,7 @@
        <template v-slot:panel="{ item }">
           <EnterSum
             :label="item.labelText"
+            :hideInput="!!sums[item.id]"
             @submit="sendSum(item, $event)"
           />
         </template>
@@ -14,7 +15,11 @@
         <p>The offer is €{{sums.employer}}</p>
         <p>The desired pay is €{{sums.employee}}</p>
       </template>
+      <template v-slot:footer>
+        {{weatherText}}
+      </template>
     </Modal>
+    <UIButton @click.native="restart" v-if="this.sums.employee !== null || this.sums.employer !== null">Ah. I would like to start from scratch.</UIButton>
     <div class="home__footer">
       {{footer}}
     </div>
@@ -23,15 +28,24 @@
 
 <script>
 import Tabs from "@/components/ui/tabs"
+import UIButton from "@/components/ui/button"
 import EnterSum from '@/components/smart/enter-sum'
 import Modal from '@/components/smart/modal'
+
+const weatherPromise = fetch('https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=7dfb07fe03b4a7621f7c3439f2eb6b4f')
+  .then(data => {
+    return data.json()
+  }).catch(e => {
+    console.error('Error fetching weather data', e)
+  })
 
 export default {
   name: 'Home',
   components: {
     Tabs,
     EnterSum,
-    Modal
+    Modal,
+    UIButton
   },
   data() {
     return {
@@ -51,6 +65,7 @@ export default {
         employee: null,
         employer: null,
       },
+      weatherText: 'Please wait while I fetch the current weather in London for you...'
     }
   },
   computed: {
@@ -73,12 +88,25 @@ export default {
       }, '')
     }
   },
+  mounted() {
+    weatherPromise.then(({
+      weather,
+      main
+    }) => {
+      this.weatherText = `If you go out in London now, you'll experience ${weather.map(({description}) => description).join(' and ')}. The temperature is around ${Math.floor(main.temp_min)}° - ${Math.ceil(main.temp_max)}°. But you'd better stay home for now.`
+    })
+  },
   methods: {
     sendSum(item, value) {
       this.sums[item.id] = value
       if (this.sums.employee !== null && this.sums.employer !== null) {
         this.showModal = true
       }
+    },
+    restart() {
+      Object.keys(this.sums).forEach((key) => {
+        this.sums[key] = null
+      })
     }
   }
 }

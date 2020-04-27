@@ -3,6 +3,7 @@
     <UINumberInput
       :placeholder="80000"
       :label="label"
+      :hideInput="hideInput"
       v-model="value"
     />
     <UIButton class="enter-sum__submit">submit</UIButton>
@@ -21,6 +22,10 @@ export default {
     label: {
       type: String,
       default: 'Enter sum:'
+    },
+    hideInput: {
+      type: Boolean,
+      default: false,
     }
   },
   data() {

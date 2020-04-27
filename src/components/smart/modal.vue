@@ -74,6 +74,17 @@ export default {
     flex-direction column
   }
 
+  &__overlay {
+    background hsla(0,0%,0%,.75)
+    bottom 0
+    cursor default
+    display block
+    left 0
+    position absolute
+    right 0
+    top 0
+  }
+
   &__header {
     font-size 1.5rem
     margin-top 1em

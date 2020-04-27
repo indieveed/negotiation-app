@@ -95,8 +95,15 @@ export default {
     padding 1em
     border 2px solid
     border-bottom 0
-    display block
+    display flex
+    align-items center
     cursor pointer
+    height 44px
+
+    @media (max-width: 640px) {
+      padding .5em
+      font-size .8rem
+    }
   }
 
   &__body {
@@ -104,7 +111,8 @@ export default {
   }
   
   &__panel {
-    min-height 300px
+    padding-top 1em
+    padding-bottom 1em
     display none
     justify-content center
     align-items center

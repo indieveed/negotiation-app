@@ -6,6 +6,9 @@
       :value="value"
       :required="required"
       @input="$emit('input', +$event.target.value)"
+      :class="{
+        'is-hidden': hideInput
+      }"
       class="number-input__field"
       type="number"
     >
@@ -27,6 +30,10 @@ export default {
     required: {
       type: Boolean,
       default: true
+    },
+    hideInput: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -56,6 +63,13 @@ export default {
       outline 0
       border 2px dashed $bg-color
     }
+
+    &.is-hidden {
+      opacity 0
+      pointer-events none
+      transition 2s ease
+    }
   }
 }
+
 </style>

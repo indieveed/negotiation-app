@@ -17,4 +17,12 @@
   display flex
   flex-direction column
 }
+
+h1 {
+  font-size 2rem
+  @media (max-width: 640px) {
+    font-size 1.2rem
+  }
+
+}
 </style>

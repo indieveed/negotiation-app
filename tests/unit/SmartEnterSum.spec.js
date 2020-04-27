@@ -21,4 +21,13 @@ describe('ui/tabs.vue', () => {
     const input = wrapper.find(UINumberInput)
     expect(input.vm.label).toBe(wrapper.vm.label)
   })
+  it('passes hideInput prop to the input', () => {
+    const wrapper = shallowMount(SmartEnterSum, {
+      propsData: {
+        hideInput: true
+      }
+    })
+    const input = wrapper.find(UINumberInput)
+    expect(input.vm.hideInput).toBe(wrapper.vm.hideInput)
+  })
 })
