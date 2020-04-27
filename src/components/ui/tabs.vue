@@ -64,6 +64,7 @@ export default {
   display flex
   flex-direction column
   max-width 960px
+  width 100%
   margin-left auto
   margin-right auto
 
@@ -81,6 +82,7 @@ export default {
 
   &__input:focus + &__label {
     border 2px dashed $bg-color
+    border-bottom 0
     outline 0
   }
 
@@ -91,7 +93,8 @@ export default {
 
   &__label {
     padding 1em
-    border  2px solid
+    border 2px solid
+    border-bottom 0
     display block
     cursor pointer
   }
