@@ -1,5 +1,14 @@
 # negotiation-app
 
+Hello stranger! You've found a hidden gem – The one and only Negotiation App.
+It'll help you whoever you are – whether you're an employer or an employee, it'll suit your needs.
+
+All you need is just enter the magic number and pass the computer to another negotiation side.
+
+You'll find your fortune immediately.
+
+But, before you would be able to start, you should do these steps:
+
 ## Project setup
 ```
 npm install
