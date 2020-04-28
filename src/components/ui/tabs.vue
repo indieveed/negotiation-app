@@ -99,6 +99,7 @@ export default {
     align-items center
     cursor pointer
     height 44px
+    box-sizing border-box
 
     @media (max-width: 640px) {
       padding .5em
