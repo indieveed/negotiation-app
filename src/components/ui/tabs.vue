@@ -73,6 +73,7 @@ export default {
     height 0
     z-index -1
     margin 0
+    opacity 0
   }
 
   &__input:checked + &__label {
